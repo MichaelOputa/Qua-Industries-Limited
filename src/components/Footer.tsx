@@ -1,89 +1,84 @@
-import { MapPin, Mail, Phone } from 'lucide-react';
-
-export function Footer() {
+export default function Footer() {
   const currentYear = new Date().getFullYear();
 
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
-    <footer className="bg-slate-900 text-white py-16">
-      <div className="container mx-auto px-6">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-3 gap-12 mb-12">
-            <div>
-              <img
-                src="/Qua industries limited.jpeg"
-                alt="Qua Industries Limited"
-                className="h-20 object-contain mb-6"
-              />
-              <p className="text-slate-400 leading-relaxed">
-                Building sustainable solutions and driving innovation across Africa
-              </p>
-            </div>
-
-            <div>
-              <h3 className="text-xl font-bold mb-6">Quick Links</h3>
-              <ul className="space-y-3">
-                <li>
-                  <a
-                    href="#about"
-                    className="text-slate-400 hover:text-white transition-colors duration-200"
-                  >
-                    About Us
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#vision"
-                    className="text-slate-400 hover:text-white transition-colors duration-200"
-                  >
-                    Vision & Mission
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#values"
-                    className="text-slate-400 hover:text-white transition-colors duration-200"
-                  >
-                    Core Values
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#portfolio"
-                    className="text-slate-400 hover:text-white transition-colors duration-200"
-                  >
-                    Our Portfolio
-                  </a>
-                </li>
-              </ul>
-            </div>
-
-            <div>
-              <h3 className="text-xl font-bold mb-6">Contact</h3>
-              <ul className="space-y-4">
-                <li className="flex items-start gap-3">
-                  <MapPin className="w-5 h-5 text-blue-400 flex-shrink-0 mt-1" />
-                  <span className="text-slate-400">Nigeria</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <Mail className="w-5 h-5 text-blue-400 flex-shrink-0 mt-1" />
-                  <a
-                    href="mailto:info@quaindustries.com"
-                    className="text-slate-400 hover:text-white transition-colors duration-200"
-                  >
-                    info@quaindustries.com
-                  </a>
-                </li>
-                <li className="flex items-start gap-3">
-                  <Phone className="w-5 h-5 text-blue-400 flex-shrink-0 mt-1" />
-                  <span className="text-slate-400">+234 XXX XXX XXXX</span>
-                </li>
-              </ul>
-            </div>
+    <footer className="bg-gray-900 text-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+          <div className="col-span-1 md:col-span-2">
+            <img
+              src="/Qua industries limited logo.jpeg"
+              alt="Qua Industries Limited"
+              className="h-16 w-auto mb-4 bg-white p-2 rounded"
+            />
+            <p className="text-gray-400 mb-2 italic">Designed for Impact</p>
+            <p className="text-gray-400 text-sm leading-relaxed">
+              Building sustainable African businesses that solve real-world problems across technology, food, real estate, media, and essential services.
+            </p>
           </div>
 
-          <div className="border-t border-slate-800 pt-8">
-            <p className="text-center text-slate-400">
-              {currentYear} Qua Industries Limited. All rights reserved.
+          <div>
+            <h4 className="font-semibold text-lg mb-4">Quick Links</h4>
+            <ul className="space-y-2">
+              <li>
+                <button
+                  onClick={() => scrollToSection('about')}
+                  className="text-gray-400 hover:text-white transition-colors duration-200"
+                >
+                  About Us
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => scrollToSection('vision')}
+                  className="text-gray-400 hover:text-white transition-colors duration-200"
+                >
+                  Vision & Mission
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => scrollToSection('values')}
+                  className="text-gray-400 hover:text-white transition-colors duration-200"
+                >
+                  Core Values
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => scrollToSection('subsidiaries')}
+                  className="text-gray-400 hover:text-white transition-colors duration-200"
+                >
+                  Subsidiaries
+                </button>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="font-semibold text-lg mb-4">Contact</h4>
+            <ul className="space-y-2 text-sm text-gray-400">
+              <li>Headquarters: Nigeria</li>
+              <li>Email: Industriesqua@gmail.com</li>
+              <li>Phone: 07030199811 | 07019791950</li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="border-t border-gray-800 pt-8 mt-8">
+          <div className="flex flex-col md:flex-row justify-between items-center">
+            <p className="text-gray-400 text-sm">
+              &copy; {currentYear} Qua Industries Limited. All rights reserved.
+            </p>
+            <p className="text-gray-400 text-sm mt-2 md:mt-0">
+              Building the future of African enterprise
             </p>
           </div>
         </div>

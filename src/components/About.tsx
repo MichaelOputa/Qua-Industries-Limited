@@ -1,68 +1,69 @@
-import { Building2, Globe, TrendingUp } from 'lucide-react';
+import { Shield, Lightbulb, DollarSign, Users, FileText } from 'lucide-react';
 
-export function About() {
+export default function About() {
+  const responsibilities = [
+    { icon: Target, label: 'Strategic Direction', description: 'Setting vision and long-term goals' },
+    { icon: Shield, label: 'Branding & Reputation', description: 'Group identity and public image' },
+    { icon: FileText, label: 'Group Finance & Legal', description: 'Financial oversight and governance' },
+    { icon: DollarSign, label: 'Investment & Fundraising', description: 'Capital allocation and growth funding' },
+    { icon: Users, label: 'Executive Leadership', description: 'CEO and Board governance' },
+  ];
+
   return (
-    <section id="about" className="py-20 bg-white">
-      <div className="container mx-auto px-6">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-6 text-slate-900">
+    <section id="about" className="py-24 bg-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             About Qua Industries
           </h2>
+          <div className="w-24 h-1 bg-blue-600 mx-auto"></div>
+        </div>
 
-          <div className="h-1 w-24 bg-blue-600 mx-auto mb-12"></div>
-
-          <p className="text-lg text-slate-700 leading-relaxed mb-8 text-center">
-            Qua Industries is a diversified company focused on building, owning, and managing scalable
-            businesses across multiple sectors, including technology, food, real estate, media, and
-            essential services.
+        <div className="max-w-4xl mx-auto space-y-6 text-lg text-gray-700 leading-relaxed mb-20">
+          <p>
+            Qua Industries is a diversified company focused on <strong>building, owning, and managing scalable businesses</strong> across multiple sectors, including <strong>technology, food, real estate, media, and essential services</strong>.
           </p>
-
-          <p className="text-lg text-slate-700 leading-relaxed mb-8">
-            Founded with a clear strategic vision, Qua Industries identifies everyday challenges and
-            develops practical, sustainable solutions through well-structured business ventures. The
-            company operates with a long-term growth mindset, prioritizing innovation, operational
-            excellence, and responsible expansion.
+          <p>
+            Founded with a clear strategic vision, Qua Industries identifies <strong>everyday challenges</strong> and develops <strong>practical, sustainable solutions</strong> through well-structured business ventures. The company operates with a <strong>long-term growth mindset</strong>, prioritizing <strong>innovation, operational excellence, and responsible expansion</strong>.
           </p>
-
-          <p className="text-lg text-slate-700 leading-relaxed mb-12">
-            As a parent platform, Qua Industries provides direction, governance, and strategic support
-            to its projects and future subsidiaries, enabling each venture to grow independently while
-            remaining aligned with the company's core values and objectives.
+          <p>
+            As a parent platform, Qua Industries provides <strong>direction, governance, and strategic support</strong> to its projects and subsidiaries, enabling each venture to grow independently while remaining aligned with the company's core values.
           </p>
+          <p>
+            Headquartered in <strong>Nigeria</strong>, Qua Industries is committed to creating <strong>local impact</strong> while building businesses designed to scale <strong>across Africa and beyond</strong>.
+          </p>
+        </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="text-center p-6 rounded-xl bg-slate-50 hover:bg-slate-100 transition-colors duration-300">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 text-blue-600 rounded-full mb-4">
-                <Building2 className="w-8 h-8" />
+        <div className="mt-20">
+          <h3 className="text-3xl font-bold text-gray-900 text-center mb-12">
+            What Qua Industries Handles
+          </h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {responsibilities.map((item, index) => (
+              <div
+                key={index}
+                className="p-8 bg-gradient-to-br from-blue-50 to-white rounded-xl border border-blue-100 hover:shadow-lg transition-all duration-300"
+              >
+                <item.icon className="h-12 w-12 text-blue-600 mb-4" />
+                <h4 className="text-xl font-semibold text-gray-900 mb-2">
+                  {item.label}
+                </h4>
+                <p className="text-gray-600">{item.description}</p>
               </div>
-              <h3 className="text-xl font-semibold mb-2 text-slate-900">Strategic Focus</h3>
-              <p className="text-slate-600">
-                Building sustainable businesses that solve real-world problems
-              </p>
-            </div>
-
-            <div className="text-center p-6 rounded-xl bg-slate-50 hover:bg-slate-100 transition-colors duration-300">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 text-blue-600 rounded-full mb-4">
-                <Globe className="w-8 h-8" />
-              </div>
-              <h3 className="text-xl font-semibold mb-2 text-slate-900">African Impact</h3>
-              <p className="text-slate-600">
-                Headquartered in Nigeria, scaling across Africa and beyond
-              </p>
-            </div>
-
-            <div className="text-center p-6 rounded-xl bg-slate-50 hover:bg-slate-100 transition-colors duration-300">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 text-blue-600 rounded-full mb-4">
-                <TrendingUp className="w-8 h-8" />
-              </div>
-              <h3 className="text-xl font-semibold mb-2 text-slate-900">Long-term Growth</h3>
-              <p className="text-slate-600">
-                Disciplined, phased expansion with sustainable cashflows
-              </p>
-            </div>
+            ))}
           </div>
         </div>
       </div>
     </section>
+  );
+}
+
+function Target({ className }: { className?: string }) {
+  return (
+    <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <circle cx="12" cy="12" r="10" strokeWidth="2" />
+      <circle cx="12" cy="12" r="6" strokeWidth="2" />
+      <circle cx="12" cy="12" r="2" strokeWidth="2" />
+    </svg>
   );
 }

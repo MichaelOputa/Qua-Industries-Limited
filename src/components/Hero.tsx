@@ -1,47 +1,73 @@
-import { ChevronDown } from 'lucide-react';
+import { ArrowRight, Building2, Target, TrendingUp, Users } from 'lucide-react';
 
-export function Hero() {
-  const scrollToAbout = () => {
-    document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' });
+export default function Hero() {
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
   };
 
+  const highlights = [
+    { icon: Building2, label: 'Who We Are', id: 'about' },
+    { icon: Target, label: 'Our Strategy', id: 'vision' },
+    { icon: TrendingUp, label: 'Our Subsidiaries', id: 'subsidiaries' },
+    { icon: Users, label: 'Our Impact', id: 'founder' },
+  ];
+
   return (
-    <section id="hero" className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800 text-white overflow-hidden pt-20">
-      <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0zNiAxOGMtOS45NDEgMC0xOCA4LjA1OS0xOCAxOHM4LjA1OSAxOCAxOCAxOCAxOC04LjA1OSAxOC0xOC04LjA1OS0xOC0xOC0xOHptMCAzMmMtNy43MzIgMC0xNC02LjI2OC0xNC0xNHM2LjI2OC0xNCAxNC0xNCAxNCA2LjI2OCAxNCAxNC02LjI2OCAxNC0xNCAxNHoiIGZpbGw9IiNmZmYiIG9wYWNpdHk9IjAuMDIiLz48L2c+PC9zdmc+')] opacity-20"></div>
+    <section id="hero" className="pt-20 bg-gradient-to-br from-blue-50 via-white to-blue-50 min-h-screen flex items-center">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <div className="text-center space-y-8">
+          <div className="flex justify-center mb-8">
+            <img
+              src="/Qua industries limited logo.jpeg"
+              alt="Qua Industries Limited"
+              className="h-32 w-auto"
+            />
+          </div>
 
-      <div className="container mx-auto px-6 text-center relative z-10">
-        <div className="mb-8 animate-fade-in">
-          <img
-            src="/Qua industries limited.jpeg"
-            alt="Qua Industries Limited"
-            className="mx-auto h-32 md:h-40 object-contain"
-          />
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 tracking-tight">
+            Qua Industries Limited
+          </h1>
+
+          <p className="text-2xl md:text-3xl text-blue-600 font-light italic">
+            Designed for Impact
+          </p>
+
+          <p className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            Building sustainable African businesses that solve real-world problems.
+          </p>
+
+          <div className="flex flex-col sm:flex-row gap-4 justify-center pt-8">
+            <button
+              onClick={() => scrollToSection('subsidiaries')}
+              className="px-8 py-4 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition-all duration-200 flex items-center justify-center gap-2 shadow-lg hover:shadow-xl"
+            >
+              Explore Our Businesses
+              <ArrowRight className="h-5 w-5" />
+            </button>
+            <button
+              onClick={() => scrollToSection('contact')}
+              className="px-8 py-4 bg-white text-blue-600 border-2 border-blue-600 rounded-lg font-medium hover:bg-blue-50 transition-all duration-200"
+            >
+              Partner With Us
+            </button>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 pt-16">
+            {highlights.map((item, index) => (
+              <button
+                key={index}
+                onClick={() => scrollToSection(item.id)}
+                className="p-6 bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-200 group cursor-pointer"
+              >
+                <item.icon className="h-8 w-8 text-blue-600 mx-auto mb-3 group-hover:scale-110 transition-transform duration-200" />
+                <p className="text-gray-700 font-medium">{item.label}</p>
+              </button>
+            ))}
+          </div>
         </div>
-
-        <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-slide-up">
-          Qua Industries Limited
-        </h1>
-
-        <p className="text-xl md:text-2xl text-blue-100 mb-4 max-w-3xl mx-auto animate-slide-up-delay-1">
-          Building Sustainable Solutions Across Africa
-        </p>
-
-        <p className="text-lg md:text-xl text-blue-200 mb-12 max-w-4xl mx-auto leading-relaxed animate-slide-up-delay-2">
-          A diversified African enterprise creating practical, scalable businesses across technology,
-          food systems, real estate, media, and essential services
-        </p>
-
-        <button
-          onClick={scrollToAbout}
-          className="group inline-flex items-center gap-2 bg-white text-blue-900 px-8 py-4 rounded-full text-lg font-semibold hover:bg-blue-50 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 animate-slide-up-delay-3"
-        >
-          Explore Our Vision
-          <ChevronDown className="w-5 h-5 group-hover:translate-y-1 transition-transform" />
-        </button>
-      </div>
-
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-        <ChevronDown className="w-8 h-8 text-white opacity-50" />
       </div>
     </section>
   );
