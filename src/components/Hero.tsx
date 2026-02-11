@@ -28,7 +28,7 @@ export default function Hero() {
           </div>
 
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 tracking-tight">
-            Qua Industries Limited
+            Qua Industries
           </h1>
 
           <p className="text-2xl md:text-3xl text-blue-600 font-light italic">

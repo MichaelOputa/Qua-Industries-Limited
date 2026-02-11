@@ -3,6 +3,7 @@ import Hero from './components/Hero';
 import About from './components/About';
 import VisionMission from './components/VisionMission';
 import CoreValues from './components/CoreValues';
+import Team from './components/Team';
 import Subsidiaries from './components/Subsidiaries';
 import FounderNote from './components/FounderNote';
 import Contact from './components/Contact';
@@ -16,6 +17,7 @@ function App() {
       <About />
       <VisionMission />
       <CoreValues />
+      <Team />
       <Subsidiaries />
       <FounderNote />
       <Contact />

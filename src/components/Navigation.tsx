@@ -26,6 +26,7 @@ export default function Navigation() {
     { name: 'About', id: 'about' },
     { name: 'Vision & Mission', id: 'vision' },
     { name: 'Values', id: 'values' },
+    { name: 'Team', id: 'team' },
     { name: 'Subsidiaries', id: 'subsidiaries' },
     { name: 'Founder', id: 'founder' },
     { name: 'Contact', id: 'contact' },
