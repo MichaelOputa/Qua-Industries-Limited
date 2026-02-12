@@ -127,7 +127,7 @@ export default function Team() {
             We're always looking for talented individuals passionate about building meaningful businesses across Africa. If you share our vision and want to make an impact, we'd love to hear from you.
           </p>
           <a
-            href="mailto:careers@quaindustries.com"
+            href="mailto:Industriesqua@gmail.com"
             className="inline-block px-8 py-4 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition-all duration-200"
           >
             Explore Opportunities
