@@ -1,6 +1,9 @@
+import { useState } from 'react';
 import { Linkedin, Mail } from 'lucide-react';
+import ImageModal from './ImageModal';
 
 export default function Team() {
+  const [selectedImage, setSelectedImage] = useState<{ src: string; alt: string } | null>(null);
   const teamMembers = [
     {
       name: 'Timfon Aqua',
@@ -8,6 +11,7 @@ export default function Team() {
       bio: 'Visionary entrepreneur dedicated to solving real-world challenges across Africa',
       email: 'timfon@quaindustries.com',
       linkedin: '#',
+      image: 'https://images.pexels.com/photos/1181690/pexels-photo-1181690.jpeg?auto=compress&cs=tinysrgb&w=600',
     },
     {
       name: 'Executive Leadership',
@@ -15,6 +19,7 @@ export default function Team() {
       bio: 'Experienced team driving innovation and growth across all subsidiaries',
       email: 'leadership@quaindustries.com',
       linkedin: '#',
+      image: 'https://images.pexels.com/photos/3807517/pexels-photo-3807517.jpeg?auto=compress&cs=tinysrgb&w=600',
     },
     {
       name: 'Operations Team',
@@ -22,6 +27,7 @@ export default function Team() {
       bio: 'Dedicated professionals ensuring operational efficiency and quality delivery',
       email: 'operations@quaindustries.com',
       linkedin: '#',
+      image: 'https://images.pexels.com/photos/3769021/pexels-photo-3769021.jpeg?auto=compress&cs=tinysrgb&w=600',
     },
     {
       name: 'Finance & Legal',
@@ -29,6 +35,7 @@ export default function Team() {
       bio: 'Expert team managing financial oversight and corporate governance',
       email: 'finance@quaindustries.com',
       linkedin: '#',
+      image: 'https://images.pexels.com/photos/3962286/pexels-photo-3962286.jpeg?auto=compress&cs=tinysrgb&w=600',
     },
     {
       name: 'Innovation Lab',
@@ -36,6 +43,7 @@ export default function Team() {
       bio: 'Forward-thinking minds exploring emerging opportunities and technologies',
       email: 'innovation@quaindustries.com',
       linkedin: '#',
+      image: 'https://images.pexels.com/photos/3771127/pexels-photo-3771127.jpeg?auto=compress&cs=tinysrgb&w=600',
     },
     {
       name: 'Business Development',
@@ -43,6 +51,7 @@ export default function Team() {
       bio: 'Building strategic partnerships and identifying investment opportunities',
       email: 'partnerships@quaindustries.com',
       linkedin: '#',
+      image: 'https://images.pexels.com/photos/2173507/pexels-photo-2173507.jpeg?auto=compress&cs=tinysrgb&w=600',
     },
   ];
 
@@ -65,7 +74,13 @@ export default function Team() {
               key={index}
               className="bg-white rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden group"
             >
-              <div className="h-32 bg-gradient-to-r from-blue-600 to-blue-700 group-hover:from-blue-700 group-hover:to-blue-800 transition-colors duration-300"></div>
+              <div className="relative h-64 overflow-hidden bg-gray-200 cursor-pointer" onClick={() => setSelectedImage({ src: member.image, alt: member.name })}>
+                <img
+                  src={member.image}
+                  alt={member.name}
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                />
+              </div>
 
               <div className="px-6 py-8">
                 <div className="mb-4">
@@ -118,6 +133,13 @@ export default function Team() {
             Explore Opportunities
           </a>
         </div>
+
+        <ImageModal
+          isOpen={!!selectedImage}
+          src={selectedImage?.src || ''}
+          alt={selectedImage?.alt || ''}
+          onClose={() => setSelectedImage(null)}
+        />
       </div>
     </section>
   );

@@ -1,4 +1,4 @@
-import { Tv, MessageCircle, Cpu, Wheat, Building, Globe, Church, ShoppingBag, Film, Truck, Shirt, DollarSign, Zap, Heart, Home } from 'lucide-react';
+import { Tv, MessageCircle, Cpu, Wheat, Building, Globe, ShoppingBag, Film, Truck, Shirt, DollarSign, Zap, Heart, Home } from 'lucide-react';
 
 export default function Subsidiaries() {
   const subsidiaries = [
@@ -37,12 +37,6 @@ export default function Subsidiaries() {
       name: 'Excellent Africa',
       sector: 'Non-Profit',
       description: 'NGO for African advocacy and development',
-    },
-    {
-      icon: Church,
-      name: 'Methodist Church Nigeria TV',
-      sector: 'Faith Media',
-      description: 'Faith-based media and broadcasting',
     },
     {
       icon: Tv,

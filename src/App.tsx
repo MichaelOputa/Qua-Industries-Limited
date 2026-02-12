@@ -8,6 +8,7 @@ import Subsidiaries from './components/Subsidiaries';
 import FounderNote from './components/FounderNote';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import FloatingWhatsAppButton from './components/FloatingWhatsAppButton';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
       <FounderNote />
       <Contact />
       <Footer />
+      <FloatingWhatsAppButton />
     </div>
   );
 }

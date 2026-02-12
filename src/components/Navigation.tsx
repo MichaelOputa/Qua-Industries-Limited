@@ -47,7 +47,7 @@ export default function Navigation() {
             <img
               src="/Qua industries limited logo.jpeg"
               alt="Qua Industries Limited"
-              className="h-12 w-auto"
+              className="h-14 w-auto"
             />
           </div>
 
