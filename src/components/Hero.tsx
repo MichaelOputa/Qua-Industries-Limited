@@ -16,26 +16,19 @@ export default function Hero() {
   ];
 
   return (
-    <section id="hero" className="pt-20 bg-gradient-to-br from-blue-50 via-white to-blue-50 min-h-screen flex items-center">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+    <section id="hero" className="pt-20 min-h-screen flex items-center relative overflow-hidden" style={{ backgroundImage: 'url(/background.jpeg)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundAttachment: 'fixed' }}>
+      <div className="absolute inset-0 bg-black/40 z-10"></div>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-20">
         <div className="text-center space-y-8">
-          <div className="flex justify-center mb-8">
-            <img
-              src="/Qua industries limited logo.jpeg"
-              alt="Qua Industries Limited"
-              className="h-32 w-auto"
-            />
-          </div>
-
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 tracking-tight">
-            Qua Industries
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white tracking-tight">
+            Qua Industries Limited
           </h1>
 
-          <p className="text-2xl md:text-3xl text-blue-600 font-light italic">
+          <p className="text-2xl md:text-3xl text-blue-300 font-light italic">
             Designed for Impact
           </p>
 
-          <p className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl md:text-2xl text-gray-100 max-w-3xl mx-auto leading-relaxed">
             Building sustainable African businesses that solve real-world problems.
           </p>
 
@@ -60,7 +53,7 @@ export default function Hero() {
               <button
                 key={index}
                 onClick={() => scrollToSection(item.id)}
-                className="p-6 bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-200 group cursor-pointer"
+                className="p-6 bg-white/95 rounded-xl shadow-md hover:shadow-lg transition-all duration-200 group cursor-pointer hover:bg-white"
               >
                 <item.icon className="h-8 w-8 text-blue-600 mx-auto mb-3 group-hover:scale-110 transition-transform duration-200" />
                 <p className="text-gray-700 font-medium">{item.label}</p>

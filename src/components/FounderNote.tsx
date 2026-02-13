@@ -2,17 +2,18 @@ import { Quote } from 'lucide-react';
 
 export default function FounderNote() {
   return (
-    <section id="founder" className="py-24 bg-gradient-to-br from-gray-50 to-blue-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="founder" className="py-24 relative overflow-hidden" style={{ backgroundImage: 'url(/Timfon.jpeg)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundAttachment: 'fixed' }}>
+      <div className="absolute inset-0 bg-black/50 z-10"></div>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             A Note from the Founder
           </h2>
-          <div className="w-24 h-1 bg-blue-600 mx-auto"></div>
+          <div className="w-24 h-1 bg-blue-400 mx-auto"></div>
         </div>
 
         <div className="max-w-4xl mx-auto">
-          <div className="bg-white rounded-2xl shadow-xl p-10 md:p-16 relative">
+          <div className="bg-white/98 rounded-2xl shadow-2xl p-10 md:p-16 relative backdrop-blur-sm">
             <Quote className="h-16 w-16 text-blue-200 absolute top-8 left-8 opacity-50" />
 
             <div className="relative z-10 space-y-6 text-lg text-gray-700 leading-relaxed">
