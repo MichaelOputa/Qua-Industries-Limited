@@ -1,4 +1,4 @@
-import { Shield, Lightbulb, DollarSign, Users, FileText } from 'lucide-react';
+import { Shield, DollarSign, Users, FileText } from 'lucide-react';
 
 export default function About() {
   const responsibilities = [

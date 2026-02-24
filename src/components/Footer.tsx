@@ -67,7 +67,7 @@ export default function Footer() {
             <ul className="space-y-2 text-sm text-gray-400">
               <li>Headquarters: Nigeria</li>
               <li>Email: Industriesqua@gmail.com</li>
-              <li>Phone: 07030199811 | 07019791950</li>
+              <li>Phone: +2347019791950</li>
             </ul>
           </div>
         </div>

@@ -24,7 +24,7 @@ export default function Contact() {
   const contactInfo = [
     { icon: MapPin, label: 'Headquarters', value: 'Nigeria' },
     { icon: Mail, label: 'Email', value: 'Industriesqua@gmail.com' },
-    { icon: Phone, label: 'Phone', value: '07030199811 | 07019791950' },
+    { icon: Phone, label: 'Phone', value: '+2347019791950' },
   ];
 
   const socialLinks = [

@@ -37,6 +37,14 @@ export default function Team() {
       linkedin: '#',
       image: '/finance.jpeg',
     },
+    {
+      name: 'Bright Ntuk',
+      role: 'Project Management & Partnerships',
+      bio: 'Project manager building strategic partnerships and driving growth across our initiatives',
+      email: '',
+      linkedin: '#',
+      image: '/project.jpeg',
+    }
   ];
 
   return (
