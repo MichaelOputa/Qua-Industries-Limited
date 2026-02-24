@@ -23,13 +23,13 @@ export default function Navigation() {
 
   const navLinks = [
     { name: 'Home', id: 'hero' },
-    { name: 'About Us', id: 'about' },
+    { name: 'About', id: 'about' },
     { name: 'Vision & Mission', id: 'vision' },
-    { name: 'Core Values', id: 'values' },
-    { name: 'Our Projects', id: 'projects' },
-    { name: 'Our Team', id: 'team' },
+    { name: 'Values', id: 'values' },
+    { name: 'Our Projects', id: 'our-projects'},
+    { name: 'Team', id: 'team' },
     { name: 'Subsidiaries', id: 'subsidiaries' },
-    { name: 'Founder’s Note', id: 'founder' },
+    { name: 'Founder', id: 'founder' },
     { name: 'Contact', id: 'contact' },
   ];
 
