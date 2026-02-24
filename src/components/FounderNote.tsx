@@ -16,7 +16,7 @@ export default function FounderNote() {
           <div className="bg-white/98 rounded-2xl shadow-2xl p-10 md:p-16 relative backdrop-blur-sm">
             <Quote className="h-16 w-16 text-blue-200 absolute top-8 left-8 opacity-50" />
 
-            <div className="relative z-10 space-y-6 text-lg text-gray-700 leading-relaxed">
+            <div className="relative z-10 space-y-6 text-lg text-gray-50 leading-relaxed">
               <p>
                 Hello, I'm <strong className="text-gray-900">Timfon Aqua</strong>. Growing up in Nigeria, I've seen firsthand how small challenges can make everyday life harder for ordinary people. I've always believed that with vision, determination, and creativity, we can build solutions that truly make a difference.
               </p>
@@ -37,8 +37,8 @@ export default function FounderNote() {
             <div className="mt-10 pt-8 border-t border-gray-200">
               <div className="flex items-center justify-between">
                 <div>
-                  <p className="text-2xl font-bold text-gray-900">Timfon Aqua</p>
-                  <p className="text-gray-600">Founder & CEO</p>
+                  <p className="text-2xl font-bold text-gray-500">Timfon Aqua</p>
+                  <p className="text-gray-200">Founder & CEO</p>
                 </div>
               </div>
             </div>
