@@ -44,6 +44,14 @@ export default function Team() {
       email: '',
       linkedin: '#',
       image: '/project.jpeg',
+    },
+    {
+      name: 'Enoch Ininyene',
+      role: 'Head of Brand & Visual Strategy',
+      bio: 'Creative leader shaping our brand identity and visual storytelling across all platforms',
+      email: '',
+      linkedin: '#',
+      image: '/Visual.jpeg',
     }
   ];
 
