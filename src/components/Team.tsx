@@ -19,7 +19,7 @@ export default function Team() {
       bio: 'Experienced tech leader driving innovation and technology solutions across our ventures',
       email: 'michaeloputa823@gmail.com',
       linkedin: 'https://ng.linkedin.com/in/michael-oputa-7310a3280',
-      image: '/Tech.jpeg',
+      image: '/beyonder.jpeg',
     },
     {
       name: 'Boma Jaja',
@@ -47,11 +47,19 @@ export default function Team() {
     },
     {
       name: 'Enoch Ininyene',
-      role: 'Head of Brand & Visual Strategy',
+      role: 'Brand & Visual Strategist',
       bio: 'Creative leader shaping our brand identity and visual storytelling across all platforms',
       email: '',
       linkedin: '#',
       image: '/Visual.jpeg',
+    },
+    {
+      name: 'Udemeabasi James',
+      role: 'Marketing & Expansion Strategist',
+      bio: 'Marketing strategist focused on growth, expansion, and impact across our ventures',
+      email: '',
+      linkedin: '#',
+      image: '/marketer.jpeg',
     }
   ];
 
