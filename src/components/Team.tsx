@@ -19,7 +19,7 @@ export default function Team() {
       bio: 'Experienced tech leader driving innovation and technology solutions across our ventures',
       email: 'michaeloputa823@gmail.com',
       linkedin: 'https://ng.linkedin.com/in/michael-oputa-7310a3280',
-      image: '/beyonder.jpeg',
+      image: '/Tech.jpeg',
     },
     {
       name: 'Boma Jaja',
