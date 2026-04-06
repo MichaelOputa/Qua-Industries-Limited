@@ -10,9 +10,17 @@ export default function Contact() {
   });
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log('Form submitted:', formData);
-  };
+  e.preventDefault();
+  const subject = encodeURIComponent(
+    formData.company
+      ? `Enquiry from ${formData.name} (${formData.company})`
+      : `Enquiry from ${formData.name}`
+  );
+  const body = encodeURIComponent(
+    `Name: ${formData.name}\nEmail: ${formData.email}${formData.company ? `\nCompany: ${formData.company}` : ''}\n\n${formData.message}`
+  );
+  window.location.href = `mailto:Industriesqua@gmail.com?subject=${subject}&body=${body}`;
+};
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
